@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="MeinLeverkusen und MeinLützenkirchen – Neuigkeiten, Termine und Tipps aus deiner Stadt.">
+<meta name="robots" content="noai, noimageai">
+<title>meinlev.de</title>
+<style>
+:root {
+  --bg: #2e65cb;
+  --white: #ffffff;
+  --soft: rgba(255,255,255,.78);
+  --line: rgba(255,255,255,.35);
+  --ink: #0f47af;
+  --ink-dark: #0b3a91;
+  --display: "Avenir Next","Segoe UI Black","Helvetica Neue",Arial,system-ui,sans-serif;
+  --body: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+html{background:var(--bg)}
+body{
+  background:var(--bg);color:var(--white);font-family:var(--body);font-size:16px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:48px 32px;
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  position:relative;overflow-x:hidden;
+}
+.blob{position:absolute;z-index:0;fill:var(--white);opacity:.07;pointer-events:none}
+.blob.b1{width:340px;top:-90px;left:-120px}
+.blob.b2{width:280px;top:420px;right:-110px}
+.wrap{position:relative;z-index:1;max-width:480px;width:100%;display:flex;flex-direction:column;align-items:center;gap:32px;text-align:center}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(26px,6vw,36px);margin:0;letter-spacing:-.02em}
+.sub{color:var(--soft);margin:0;max-width:34ch}
+.cards{display:flex;flex-direction:column;gap:16px;width:100%}
+.card{
+  display:flex;align-items:center;gap:18px;
+  background:var(--white);border-radius:22px;padding:16px 20px;
+  color:var(--ink);text-decoration:none;font-weight:600;font-size:17px;
+  transition:transform .15s,box-shadow .15s;
+}
+.card:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--ink-dark)}
+.card:focus-visible{outline:3px solid var(--white);outline-offset:3px}
+.card img{width:64px;height:auto;border-radius:14px;flex:none}
+.card div{flex:1;min-width:0;text-align:left}
+.card small{display:block;font-weight:400;font-size:13px;color:var(--ink-dark);opacity:.8}
+.card .arrow{font-size:22px;flex:none;color:var(--ink-dark)}
+footer{font-size:12px;color:var(--soft);letter-spacing:.06em}
+@media(prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+<svg class="blob b1" viewBox="0 0 100 100" aria-hidden="true"><path d="M58 4 C82 6 99 26 96 50 C93 74 76 96 50 95 C27 94 6 80 4 56 C2 30 30 2 58 4 Z"/></svg>
+<svg class="blob b2" viewBox="0 0 100 100" aria-hidden="true"><path d="M40 3 C66 1 95 12 97 40 C99 66 82 92 56 96 C30 99 5 84 3 58 C1 34 16 6 40 3 Z"/></svg>
+<div class="wrap">
+  <h1>meinlev.de</h1>
+  <p class="sub">Neuigkeiten, Termine und Tipps aus Leverkusen – kurz und herzlich für dich zusammengestellt.</p>
+  <div class="cards">
+    <a class="card" href="/leverkusen/">
+      <img src="logo-leverkusen.png" alt="" width="640" height="577">
+      <div>MeinLeverkusen<small>Leverkusen · 51371–51381</small></div>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="card" href="/luetzenkirchen/">
+      <img src="logo-luetzenkirchen.png" alt="" width="640" height="499">
+      <div>MeinLützenkirchen<small>Leverkusen-Lützenkirchen · 51381</small></div>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
+  <footer>meinlev.de</footer>
+</div>
+</body>
+</html>
